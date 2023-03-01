@@ -1,13 +1,28 @@
-# programa para calcular raiz cuadratica
+# Programa para calcular una ecuacion cuadratica
 
-# input
+import math
 
-A = int(input("Digite el valor de A: "))
-B = int(input("Digite el valor de B: "))
-C = int(input("Digite el valor de C: "))
 
-# processing
-d=B*2-4*A*C
+print("----------------------------------------------")
+print("------ Resolver la ecuación cuadrática -------")
+print("----------------------------------------------")
+
+#input
+
+a = int(input("Digite el valor de a: "))
+b = int(input("Digite el valor de b: "))
+c = int(input("Digite el valor de c: "))
+
+#processing
+
+d = b**2-4*a*c
 if d == 0:
-    print ("es un número imaginario")
+    x1 = (d/2*a)
+    x2 = x1
+    print(x1, x2)
+if d > 0:
+    x1 =(-b+math.sqrt(d))/(2*a)
+    x2 =(-b-math.sqrt(d))/(2*a)
+    print(x1, x2)
 else:
+    print("la solución es imaginaria")
